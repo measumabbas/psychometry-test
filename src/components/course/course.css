@@ -1,0 +1,55 @@
+.accordItem{
+    background-color:'#148EBF';
+    color:'#fff';
+    display:'flex';
+
+}
+.course-title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.course-info{
+    font-size: 14px;
+    color: rgb(34, 34, 34);
+    font-weight: bold;
+}
+.course-desc{
+    position: relative;
+}
+.course-info span{
+    margin-right: 30px;
+    border-right: 2px solid #fff;
+    padding-right: 10px;
+}
+.delete{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: 14px;
+}
+.icon:hover{
+    color: red;
+}
+
+
+.courses-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.courses-head h3{
+    font-size: 20px;
+}
+.courses-head button{
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #148EBF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

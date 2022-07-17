@@ -1,0 +1,23 @@
+.testimonial{
+    background-color: #F2143F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.testimonials{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.testimonial .text p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
