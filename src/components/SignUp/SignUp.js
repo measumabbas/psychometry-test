@@ -12,7 +12,7 @@ const SignUp = () => {
                     <img src={logo} alt="" />
 
                     </div>
-                    <h2>Supreme Applet Court Gilgit Baltistan</h2>
+                    <h2>Psychometry Test</h2>
                 </div>
             </div>
             <div className="sign-main-log">

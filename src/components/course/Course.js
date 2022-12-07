@@ -1,58 +1,63 @@
 import React from 'react'
 import {
-    Accordion,
     AccordionItem,
     AccordionItemHeading,
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-import {AiFillDelete} from 'react-icons/ai'
+import { MdQuiz } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom';
 
 import 'react-accessible-accordion/dist/fancy-example.css';
 import './course.css'
-const Course = ({courseData}) => {
-    console.log(courseData)
-
+const Course = ({ name ,index,display}) => {
+    // console.log('course')
     const accordianStyle = {
-        backgroundColor: '#148EBF', 
-        color: '#fff', 
+        backgroundColor: '#148EBF',
+        color: '#fff',
         display: 'flex',
-        alignItems:'center',
-        justifyContent:'center',
-        gap:'30px'
+        alignItems: 'center',
+        gap: '30px'
     }
+
+    const navigate = useNavigate()
+
+const handleClick = (e)=>{
+    localStorage.setItem("name",name)
+    localStorage.setItem("index",index)
+    navigate('/dashboard/judiciary')
+
+
+}
     return (
-        <div>
-                <AccordionItem style={{marginBottom:'20px'}}>
-                    <AccordionItemHeading>
-                        <AccordionItemButton style={accordianStyle}>
-                            <div className="course-desc">
-                                <p className="course-title">
-                                    {courseData.name}
-                                </p>
-                                <div className="course-info">
-                                    <span>Instructor  : {courseData.instructor}</span>
-                                    <span>duration    : {courseData.duration}</span>
-                                    <span>last date   : {courseData.lastDate}</span>
-                                    <span>start of classes   : {courseData.startDate}</span>
-                                    <div style={{marginTop:'15px'}}>
-
-                                    <span>category   : {courseData.category}</span>
-                                    <span>fee   : RS {courseData.fee}</span>
-                                    </div>
-                                </div>
-                                <div className="delete"><AiFillDelete className='icon'/></div>
+        <div className={`course-${index}`}>
+            <AccordionItem style={{ marginBottom: '20px' }}>
+                <AccordionItemHeading>
+                    <AccordionItemButton style={accordianStyle}>
+                        <div className="course-desc">
+                            <p className="course-title">
+                                {name}
+                            </p>
+                            <div className="course-info">
+                                <span>Marks  : 30</span>
+                                <span>duration    : 30 minutes</span>
+                                <span>description 1  : other</span>
+                                <span>description 1   : other</span>
                             </div>
-                        </AccordionItemButton>
+                        </div>
+                    </AccordionItemButton>
 
-                       
-                    </AccordionItemHeading>
-                    <AccordionItemPanel>
-                        <p>
-                        {courseData.desc}
-                        </p>
-                    </AccordionItemPanel>
-                </AccordionItem>
+
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    <div className={`course_outer`} id={`outer-${index}`} onClick={handleClick}>
+                        <div className='course_icon'>
+                            <MdQuiz />
+                        </div>
+                        <span>Start Quiz</span>
+                    </div>
+                </AccordionItemPanel>
+            </AccordionItem>
         </div>
     )
 }

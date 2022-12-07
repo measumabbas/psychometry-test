@@ -11,7 +11,7 @@ const Login = () => {
                 <div className="img">
                     <img src={logo} alt=""/>
                 </div>
-                    <h2>Institute of professional  <br/>development <br/>KIU</h2>
+                    <h2>Psychometry Test <br/>HEC</h2>
             </div>
             <div className="login-section">
                 <img src={logo} alt=""/>

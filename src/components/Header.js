@@ -7,7 +7,7 @@ const Header = ({setUserModal,userModal}) => {
          <div className="header">
             <div className="left">
                 <img src={logo} alt=""/>
-                <p>Institute of professional development</p>
+                <p>Psychometry Test</p>
             </div>
             <div className="right">
                 <div className="notify">

@@ -84,3 +84,8 @@
 .down-right-chart{
     background-color: #001609;
 }
+.dash-container{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}

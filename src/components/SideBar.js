@@ -1,13 +1,12 @@
 import React from 'react'
-import { GiInjustice } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-import { FaUniversity } from 'react-icons/fa'
 import { GiPapers } from 'react-icons/gi'
 import { MdDashboardCustomize } from 'react-icons/md'
-import { MdAppRegistration } from 'react-icons/md'
 import { MdOutlineManageSearch } from 'react-icons/md'
-import { ImHammer2 } from 'react-icons/im'
+import { MdReviews } from 'react-icons/md'
+import { MdOutlineEventAvailable } from 'react-icons/md'
+import { FaBlogger } from 'react-icons/fa'
 
 const SideBar = () => {
 
@@ -25,61 +24,66 @@ const SideBar = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to='/dashboard/institution'>
-                    <div className={`list-item ${location.pathname === '/dashboard/institution' ? 'back' : 'back-normal'}`}>
-                        <div className="icon">
-                            <MdOutlineManageSearch />
-                        </div>
-                        <div className="text">
-                            <p>Manage Courses</p>
-                        </div>
-                    </div>
-                </Link>
 
-                <Link to='/dashboard/judiciary'>
+                
 
-                    <div className={`list-item ${location.pathname === '/dashboard/judiciary' ? 'back' : 'back-normal'}`}>
-                        <div className="icon">
-                            <GiInjustice />
-                        </div>
-                        <div className="text">
-                            <p>Applications</p>
-                        </div>
-                    </div>
-                </Link>
+                <Link to={'/dashboard/steps'}>
 
-                <Link to='/dashboard/proposedlist'>
-
-                    <div className={`list-item ${location.pathname === '/dashboard/proposedlist' ? 'back' : 'back-normal'}`}>
+                    <div className={`list-item ${location.pathname === '/dashboard/steps' ? 'back' : 'back-normal'}`}>
                         <div className="icon">
                             <GiPapers />
                         </div>
                         <div className="text">
-                            <p>Proposed List</p>
+                            <p>Steps</p>
                         </div>
                     </div>
                 </Link>
 
-                <Link to='/dashboard/registrar'>
 
-                    <div className={`list-item ${location.pathname === '/dashboard/registrar' ? 'back' : 'back-normal'}`}>
+                <Link to={'/dashboard/services'}>
+
+                    <div className={`list-item ${location.pathname === '/dashboard/services' ? 'back' : 'back-normal'}`}>
                         <div className="icon">
-                            <MdAppRegistration />
+                            <MdReviews />
                         </div>
                         <div className="text">
-                            <p>Registrar</p>
+                            <p>Services</p>
                         </div>
                     </div>
                 </Link>
 
-                <Link to='/dashboard/hearings'>
+                <Link to={'/dashboard/ins'}>
 
-                    <div className={`list-item ${location.pathname === '/dashboard/hearings' ? 'back' : 'back-normal'}`}>
+                    <div className={`list-item ${location.pathname === '/dashboard/ins' ? 'back' : 'back-normal'}`}>
                         <div className="icon">
-                            <ImHammer2 />
+                            <MdOutlineEventAvailable />
                         </div>
                         <div className="text">
-                            <p>Hearings</p>
+                            <p>Institutions</p>
+                        </div>
+                    </div>
+                </Link>
+
+
+                <Link to={'/dashboard/other'}>
+
+                    <div className={`list-item ${location.pathname === '/dashboard/other' ? 'back' : 'back-normal'}`}>
+                        <div className="icon">
+                            <FaBlogger />
+                        </div>
+                        <div className="text">
+                            <p>Submitted Responses</p>
+                        </div>
+                    </div>
+                </Link>
+                <Link to={'/dashboard/about'}>
+
+                    <div className={`list-item ${location.pathname === '/dashboard/about' ? 'back' : 'back-normal'}`}>
+                        <div className="icon">
+                            <MdOutlineManageSearch />
+                        </div>
+                        <div className="text">
+                            <p>About Us</p>
                         </div>
                     </div>
                 </Link>

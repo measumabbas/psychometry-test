@@ -29,11 +29,9 @@
 }
 
 .td button{
-    padding: 5px;
+    padding: 10px 20px;
     background-color: #148EBF;
     color: #fff;
     border: none;
-}
-.td button:last-child{
-    background-color: #fc6610;
+    border-radius: 5px;
 }

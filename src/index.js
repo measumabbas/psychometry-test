@@ -9,13 +9,18 @@ import SignUp from './components/SignUp/SignUp';
 import Judiciary from './components/Judiciary';
 import Institution from './components/Institution';
 import Dashboard from './components/Dashboard/Dashboard';
-import ProposedList from './components/ProposedList/ProposedList';
-import Hearings from './components/Hearings/Hearings';
-import Registrar from './components/Registrar/Registrar';
 import SideBar from './components/SideBar';
-import Modal from './components/addCaseModal/Modal';
-import StdDetail from './components/stdDetail/StdDetail';
-import ViewDetail from './components/stdDetail/ViewDetail';
+import Ins from './components/Others/Ins';
+import About from './components/Others/About';
+import Others from './components/Others/Others';
+import Steps from './components/Others/Steps';
+import Services from './components/Others/Services';
+import QuizDetail from './components/QuizDetail';
+import Notifications from './components/Notifications';
+import Active from './components/Active';
+import Partners from './components/Partners';
+import Profile from './components/Profile';
+import Library from './components/Library';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,13 +33,18 @@ root.render(
           <Route path='judiciary' element={<Judiciary/>}/>
           <Route path='institution' element={<Institution/>}/>
           <Route path='dash' element={<Dashboard/>}/>
-          <Route path='proposedlist' element={<ProposedList/>}/>
-          <Route path='hearings' element={<Hearings/>}/>
-          <Route path='registrar' element={<Registrar/>}/>
           <Route path='sidebar' element={<SideBar/>}/>
-          <Route path='modal' element={<Modal/>}/>
-          <Route path=':course' element={<StdDetail/>}/>
-          <Route path=':course/:id' element={<ViewDetail/>}/>
+          <Route path='ins' element={<Ins/>}/>
+          <Route path='about' element={<About/>}/>
+          <Route path='other' element={<Others/>}/>
+          <Route path='other/:id' element={<QuizDetail/>}/>
+          <Route path='steps' element={<Steps/>}/>
+          <Route path='services' element={<Services/>}/>
+          <Route path='notifications' element={<Notifications/>}/>
+          <Route path='active' element={<Active/>}/>
+          <Route path='partner' element={<Partners/>}/>
+          <Route path='profile' element={<Profile/>}/>
+          <Route path='library' element={<Library/>}/>
       </Route>
     </Routes>
     </BrowserRouter>
